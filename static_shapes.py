@@ -1,6 +1,13 @@
 import sfml as sf
-class MovingRect (sf.RectangleShape):
+
+
+class MovingRect(sf.RectangleShape):
+    @property
     def rectupdate(self):
+        """
+        simple movement here
+        @return: MovingRect
+        """
         if sf.Keyboard.is_key_pressed(sf.Keyboard.RIGHT):
             self.position += (5, 0)
         elif sf.Keyboard.is_key_pressed(sf.Keyboard.LEFT):
